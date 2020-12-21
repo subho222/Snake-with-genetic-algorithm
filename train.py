@@ -4,16 +4,16 @@ import numpy as np
 input_layer_nodes = 4
 hidden_layer_nodes = 6
 output_layer_nodes = 3
-num_indivisual_per_pop = 10
+num_indivisual_per_pop = 20
 num_weights = input_layer_nodes*hidden_layer_nodes + hidden_layer_nodes*output_layer_nodes
 population_size = (num_indivisual_per_pop,num_weights)
 #file = open("weights.txt","w+")
-#new_population = np.random.choice(np.arange(-1,1,step=0.01),size=population_size,replace=True)
-new_population = np.loadtxt("weights.txt")
+new_population = np.random.choice(np.arange(-1,1,step=0.01),size=population_size,replace=True)
+#new_population = np.loadtxt("weights.txt")
 #print(new_population.shape)
 num_generations = 100
-num_parents = 4
-mutation_rate = 0.4
+num_parents = 10
+mutation_rate = 0.5
 
 for generation in range(num_generations):
 	
